@@ -1,3 +1,3 @@
-import GOVUKFrontend from "govuk-frontend/govuk/all.js"
+import { initAll } from "@scottish-government/pattern-library/src/all";
 
-GOVUKFrontend.initAll()
+initAll();

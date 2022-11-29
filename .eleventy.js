@@ -1,9 +1,7 @@
-const pluginSass = require("eleventy-plugin-sass")
-
-module.exports = eleventyConfig => {
-  // Process SCSS files into CSS
-  eleventyConfig.addPlugin(pluginSass)
+module.exports = (eleventyConfig) => {
+  // Get parcel and eleventy hmr to behave
+  eleventyConfig.setWatchThrottleWaitTime(100);
 
   // Copy over GOV.UK assets
   eleventyConfig.addPassthroughCopy("assets");
-}
+};

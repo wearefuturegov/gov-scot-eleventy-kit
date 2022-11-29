@@ -3,21 +3,24 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "npm-run-all --parallel dev:*",
+    "start": "npm-run-all --parallel -r dev:*",
     "build": "npm-run-all prod:*",
-    "dev:parcel": "parcel watch javascript/index.js -d _site/js",
-    "dev:11ty": "eleventy --serve --input=pages",
-    "prod:parcel": "parcel build javascript/index.js -d _site/js",
+    "dev:parcel:scripts": "parcel watch javascript --dist-dir _site/js",
+    "dev:parcel:styles": "parcel watch styles --dist-dir _site/styles",
+    "dev:11ty": "eleventy --serve --input=pages --output=_site",
+    "prod:parcel:scripts": "parcel build javascript/index.js --dist-dir _site/js",
+    "prod:parcel:styles": "parcel build styles/style.scss --dist-dir _site/styles",
     "prod:11ty": "ELEVENTY_ENV=production eleventy --input=pages"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "parcel-bundler": "^1.12.4",
-    "eleventy-plugin-sass": "^1.0.0",
-    "govuk-frontend": "^3.7.0",
-    "npm-run-all": "^4.1.5"
+    "@11ty/eleventy": "^1.0.2",
+    "@parcel/transformer-sass": "^2.8.0",
+    "@scottish-government/pattern-library": "^0.0.318",
+    "govuk-frontend": "^4.4.0",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.8.0"
   }
 }

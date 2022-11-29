@@ -1,10 +1,21 @@
 # GOV.UK Eleventy starter kit
 
-This is a basic [11ty](https://www.11ty.dev/) website that includes everything from [GOV.UK Frontend](https://frontend.design-system.service.gov.uk/#gov-uk-frontend).
+This is a basic [11ty](https://www.11ty.dev/) website that includes everything from [Digital Scotland Frontend](https://designsystem.gov.scot/).
 
-You can copy and paste code samples straight from the [GOV.UK design system](https://design-system.service.gov.uk/).
+You can copy and paste code samples straight from the [Digital scotland design system](https://designsystem.gov.scot/).
 
 It should be great for prototypes, but might also be suitable for some small, simple production services as well.
+
+A good reference is the [gov.scot design system website](https://github.com/scottishgovernment/designsystem.gov.scot) - especially for images etc that might be missing!
+
+## 🤺 Installation
+
+```sh
+npm install
+npm run start
+```
+
+![](screenshot.png)
 
 ## 🧠 Anatomy
 
@@ -43,7 +54,6 @@ npm run dev
 ```
 
 It should be available in your browser at `http://localhost:8080`.
-
 
 ## 🛰 Putting it on the web
 
